@@ -16,7 +16,7 @@ pipeline {
 
         stage('Install Dependencies & Test') {
             steps {
-                sh 'pip3 install flask pytest'
+                sh 'pip install flask pytest'
                 
             }
         }
