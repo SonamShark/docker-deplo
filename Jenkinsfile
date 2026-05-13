@@ -7,11 +7,12 @@ pipeline {
 
     stages {
         
-        // stage('Clone Repo') {
-        //     steps {
-        //         sh 'git clone https://github.com/SonamShark/docker-deplo.git'
-        //     }
-        // }
+        stage('Clone Repo') {
+            steps {
+                sh 'rm -rf docker-deplo'
+                sh 'git clone https://github.com/SonamShark/docker-deplo.git'
+            }
+        }
 
         stage('Install Dependencies & Test') {
             steps {
